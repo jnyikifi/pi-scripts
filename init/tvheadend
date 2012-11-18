@@ -1,0 +1,14 @@
+#!/bin/sh
+
+TVHBIN=/usr/local/bin/tvheadend
+
+case $1 in
+    start)
+	start-stop-daemon --start \
+	    --chuid pi \
+	    --exec ${TVHBIN} -- -C -f -s
+	;;
+    stop)
+	start-stop-daemon --stop --quiet --exec ${TVHBIN} --signal 2
+	;;
+esac
