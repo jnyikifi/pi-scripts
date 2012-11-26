@@ -11,6 +11,7 @@ cd /
 tar czvf $filename \
     boot/config.txt \
     home/pi/.hts/ \
+    home/pi/.ssh/ \
     etc/fstab \
     home/pi/pkg.list
 
